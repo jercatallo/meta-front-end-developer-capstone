@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { LandingPage } from './LandingPage'; // Adjust the path as needed
+import { LandingPage } from './LandingPage';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-describe('LandingPage', () => {
+describe('LandingPage component', () => {
     it('renders with best seller items', () => {
         // Arrange
         render(<MemoryRouter initialEntries={['/']}>

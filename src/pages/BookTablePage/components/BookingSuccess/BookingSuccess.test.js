@@ -1,17 +1,12 @@
 import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-// import { Hero } from './Hero'; // Adjust the import path as needed
-import { LandingPage } from '../../../../pages';
+import { LandingPage } from '../../..';
 import { BookingSuccess } from './BookingSuccess';
 
 
-describe('Hero component', () => {
-
+describe('BookingSuccess component', () => {
     const componentToTest = ({ initialPath, bookingSuccessProps }) => {
-     
-
-
         return (
             <MemoryRouter initialEntries={[initialPath]}>
                 <Routes>
@@ -28,6 +23,7 @@ describe('Hero component', () => {
             </MemoryRouter>
         )
     }
+
   it('should renders the Booking Success component with the correct content', () => {
     // Arrange
     const bookingSuccessProps = {

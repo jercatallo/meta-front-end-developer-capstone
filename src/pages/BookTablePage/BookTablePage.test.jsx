@@ -8,7 +8,6 @@ import { LandingPage } from '../LandingPage';
 
 
 describe('BookTablePage component', () => {
-
     it('should render BookTablePage component with complete props without errors', async () => {
         // Arrange
         await act(() => {

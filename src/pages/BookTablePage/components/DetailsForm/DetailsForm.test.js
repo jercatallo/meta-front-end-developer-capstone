@@ -4,7 +4,6 @@ import { DetailsForm } from './index';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 
-
 describe('DetailsForm component', () => {
     it('should render BookTablePage component with complete props without errors', async () => {
         // Arrange

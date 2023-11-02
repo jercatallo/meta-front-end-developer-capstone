@@ -6,7 +6,6 @@ import { Hero } from './Hero'; // Adjust the import path as needed
 import { BookTablePage } from '../../../BookTablePage';
 
 describe('Hero component', () => {
-
     const componentToTest = ({ initialPath }) => {
         return (
             <MemoryRouter initialEntries={[initialPath]}>

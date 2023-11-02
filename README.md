@@ -13,6 +13,7 @@ The device must have node and npm(or yarn) installed.
 2. run the command "npm install" to install app dependencies
 3. finally run "npm run dev". The webpack will run the application on designated port the has been set in webpack.config.dev.js
 4. the application will run on http://localhost:3000/.
+5. to run the unit tests run the command "npm run coverage"
 
 # Unit Tests Results
 ![screencapture-127-0-0-1-5500-coverage-lcov-report-index-html-2023-10-31-10_46_15](https://github.com/Talyho/meta-front-end-developer-capstone/assets/49897728/ba5f728e-eaa0-4db1-87a1-3722f50f4d09)

@@ -7,8 +7,6 @@ import chickenImage from '../../../../assets/product-2.jpeg'
 
 
 describe('BestSellers component', () => {
-
-
     it('should renders the BestSellers component with the correct content', () => {
         // Arrange
         const bestSellers = [
