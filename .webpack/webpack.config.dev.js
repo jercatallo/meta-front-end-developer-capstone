@@ -13,6 +13,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '../dist'),
         filename: "bundle.js",
+        publicPath: '/'
     },
     devServer: {
         port: 3000,
@@ -20,6 +21,7 @@ module.exports = {
         watchContentBase: true,
         headers: { "Access-Control-Allow-Origin": "*" },
         open: true,
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -38,7 +40,7 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: '/src/assets/[name].[ext]'
+                    name: 'src/assets/[name].[ext]'
                 }
             },
             {

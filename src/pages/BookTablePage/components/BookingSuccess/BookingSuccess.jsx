@@ -21,7 +21,7 @@ export function BookingSuccess({ details }) {
 
             <Heading testId="booking-success-reference-number" type="h5" overrides="text-center">Here's your reference number: {referenceNumber}</Heading>
 
-            <Paragraph testId="booking-success-description" type="p3">Keep your reference number and show it to the Little Lemon Staff on {information.date} at {information.time} <br></br> This reservation is for {information.numberOfPeople} people but guests are very welcome!</Paragraph>
+            <Paragraph testId="booking-success-description" type="p4">Keep your reference number and show it to the Little Lemon Staff on {information.date} at {information.time} <br></br> This reservation is for {information.numberOfPeople} people but guests are very welcome!</Paragraph>
             <br></br>
             <Button testId='booking-success-button' onClick={() => navigate('/')} type="primary" overrides="mx-auto">Go back to home page</Button>
         </section>

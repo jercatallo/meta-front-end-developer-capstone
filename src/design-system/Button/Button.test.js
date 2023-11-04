@@ -31,6 +31,6 @@ describe('Button component', () => {
     expect(textElement).toHaveAttribute('type', buttonType);
     expect(element).toHaveAttribute('type', buttonType);
     expect(element).toBeInTheDocument();
-    expect(element).toHaveClass('py-2 rounded block text-xl text-white hover:scale-105 transition duration-200');
+    expect(element).toHaveClass('py-2 px-4 rounded block text-lg text-white hover:scale-105 transition duration-200 bg-primaryColor py-1 px-4 text-textOnPrimaryBackground hover:bg-secondaryColor');
   });
 });

@@ -8,7 +8,7 @@ export function Hero() {
   const navigate = useNavigate();
 
   return (
-    <article data-testid='hero-container' className='grid grid-cols-1 md:grid-cols-2 my-28 gap-10'>
+    <article data-testid='hero-container' className='grid grid-cols-1 md:grid-cols-2 my-28 mb-12 gap-10'>
       <section className='grid content-around'> 
         <div>
         <Heading testId='hero-heading' type="h1">Little Lemon</Heading>

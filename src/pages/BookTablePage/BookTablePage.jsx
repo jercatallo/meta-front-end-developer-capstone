@@ -30,7 +30,7 @@ export function BookTablePage() {
         callAPI({ successCallback: () => setSuccess(true), setLoading })
     }
     return (
-        <article data-testid="booking-page">
+        <article data-testid="booking-page" className='py-5'>
             {!success &&
                 <>
                     {step === 1 && <DetailsForm onSubmit={onDetailsFormSubmit} />}

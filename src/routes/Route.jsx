@@ -9,7 +9,7 @@ import { Footer, Navigation } from "../components";
 
 const GuestUserRoute = ({page}) => {
   return (
-    <div  className='min-h-screen grid content-between'>
+    <div className='min-h-screen grid content-between relative'>
       <header>
         <Navigation></Navigation>
       </header>

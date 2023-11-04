@@ -12,7 +12,7 @@ export function About() {
                 </section>
 
                 <section className='hover:scale-105 transition duration-200'>
-                    <Paragraph testId="about-paragraph1" type="p2">Welcome to "Little Lemon" nestled in the heart of California, our restaurant is designed with one goal in mind: to provide families with an inviting, warm, and inclusive environment where every member, from the youngest to the oldest, feels right at home</Paragraph>
+                    <Paragraph testId="about-paragraph1" type="p2" overrides="text-lg">Welcome to "Little Lemon" nestled in the heart of California, our restaurant is designed with one goal in mind: to provide families with an inviting, warm, and inclusive environment where every member, from the youngest to the oldest, feels right at home</Paragraph>
                     <Paragraph testId="about-paragraph-quote" overrides="text-right">~ Little Lemon Family</Paragraph>
                 </section>
             </div>

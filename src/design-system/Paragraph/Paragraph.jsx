@@ -2,10 +2,10 @@ import React from 'react'
 
 export function Paragraph({type, children, overrides, testId = 'paragraph-component'}) {
     const headingStyles = {
-        'p1': 'text-3xl',
-        'p2': 'text-2xl',
-        'p3': 'text-xl',
-        'p4': 'text-lg',
+        'p1': 'text-2xl md:text-3xl',
+        'p2': 'text-xl md:text-2xl',
+        'p3': 'text-lg',
+        'p4': 'text-md',
         'p5': 'text-sm',
         'p6': 'text-xs',
     };
