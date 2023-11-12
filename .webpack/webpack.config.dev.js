@@ -1,27 +1,20 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    devtool: "source-map",
-    cache: true,
+    devtool: 'inline-source-map', // Add source maps for better debugging
     entry: {
-        main: "./src/index.js",
+        main: './src/index.js',
     },
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: "bundle.js",
+        filename: '[name].bundle.js',
         publicPath: '/'
-    },
-    devServer: {
-        port: 3000,
-        hot: true,
-        watchContentBase: true,
-        headers: { "Access-Control-Allow-Origin": "*" },
-        open: true,
-        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -33,25 +26,21 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
-                }
+                    loader: 'babel-loader',
+                },
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: 'src/assets/[name].[ext]'
-                }
+                    name: 'src/assets/[name].[ext]',
+                },
             },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                ],
-            }
-        ]
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+        ],
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -59,12 +48,24 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         new CopyWebpackPlugin({
-            patterns: [
-                { from: 'public/images', to: './src/assets' },
-            ],
+            patterns: [{ from: 'public/images', to: './src/assets' }],
         }),
         new ESLintPlugin(),
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'public/index.html',
+            filename: 'index.html',
+        }),
     ],
+    devServer: {
+        contentBase: path.join(__dirname, '../dist'),
+        port: 3000,
+        hot: true, // Enable Hot Module Replacement (HMR)
+        open: true, // Open the default browser when the server starts
+        watchContentBase: true,
+        headers: { "Access-Control-Allow-Origin": "*" },
+        historyApiFallback: true,
+    },
     stats: {
         children: true,
         errorDetails: true,

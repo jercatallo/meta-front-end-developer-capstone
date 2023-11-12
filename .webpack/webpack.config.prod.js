@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -12,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
     },
     module: {
         rules: [
@@ -55,11 +57,20 @@ module.exports = {
             ],
         }),
         new ESLintPlugin(),
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'public/index.html',
+            filename: 'index.html',
+          }),
+        
     ],
     optimization: {
         minimizer: [
-            new TerserPlugin()
+            new TerserPlugin(),
         ],
+        splitChunks: {
+            chunks: 'all',
+        },
     },
     stats: {
         children: true,

@@ -1,4 +1,3 @@
-require('file-loader?name=[name].[ext]!../public/index.html');
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
