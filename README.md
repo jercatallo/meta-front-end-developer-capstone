@@ -4,6 +4,8 @@
 - The application have unit tests and 100% coverage. I set up the test threshold to 100% so that the capstone becomes more challenging and provide more learnings to me.
 - This course improves my foundation as a front-end developer. I've learned a lot on this course that I will be able to use in my future projects.
 
+Application URL: https://meta-front-end-developer-capstone-e1ky.onrender.com
+
 # Tech Stack:
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
